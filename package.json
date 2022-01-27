@@ -1,0 +1,14 @@
+{
+  "name": "animationland",
+  "version": "1.0.0",
+  "description": "Game of animations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "animations"
+  ],
+  "author": "willicali40@hotmail.com",
+  "license": "MIT"
+}
