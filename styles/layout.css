@@ -23,7 +23,6 @@ body {
     z-index: 1;
     width: 80px;
     height: 450px;
-    background-color: #fff;
     bottom: 0;
     right: 60px;
 }
@@ -31,31 +30,29 @@ body {
     z-index: 2;
     width: 80px;
     height: 450px;
-    background-color: #fff;
     bottom: 0;
     left: 60px
 }
 .layer-3 {
     z-index: 3;
-    width: 220px;
+    width: 225px;
     height: 410px;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: royalblue;
+    background-color: lightcoral;
 }
 .layer-4 {
     z-index: 4;
     width: 80px;
     height: 350px;
-    background-color: pink;
     bottom: 0;
     left: 30px;
 }
 .layer-5 {
     z-index: 5;
-    width: 200px;
+    width: 190px;
     height: 310px;
     background-color: saddlebrown;
     bottom: 0;
@@ -64,7 +61,6 @@ body {
     z-index: 6;
     width: 80px;
     height: 280px;
-    background-color: #fff;
     bottom: 0;
     right: 30px;
 }

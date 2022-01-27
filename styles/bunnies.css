@@ -1,0 +1,61 @@
+.left-ear--outer {
+    width: 20px;
+    height: 60px;
+    border-radius: 90%;
+    background-color: #fff;
+    position: absolute;
+    left: 10px
+}
+.left-ear--inner {
+    width: 13px;
+    height: 50px;
+    border-radius: 95%;
+    background-color: pink;
+    position: absolute;
+    top: 10px;
+    left: 13px
+}
+.right-ear--outer {
+    width: 20px;
+    height: 50px;
+    border-radius: 90%;
+    background-color: #fff;
+    position: absolute;
+    right: 10px;
+}
+.right-ear--inner {
+    width: 13px;
+    height: 50px;
+    border-radius: 95%;
+    background-color: pink;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+}
+.head {
+    width: 95%;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.head_eye {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 13px;
+}
+
+.head_eye--left {
+    left: 30px;
+}
+.head_eye--right {
+    right: 30px;
+}
