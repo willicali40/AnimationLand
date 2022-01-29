@@ -1,3 +1,10 @@
+:root{
+    --mountain-color: rgb(235, 165, 79);
+    --border-color: #000;
+    --sky-color: #CCEFFF;
+    --rabbit-color: #fff;
+    --forest-green: #228b22;
+}
 body {
     box-sizing: border-box;
     margin: 0;
@@ -6,15 +13,30 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    counter-reset: points;
+    font-family: 'Lobster', cursive;
 }
+
 .phone {
     position: relative;
-    border: 8px solid #000;
+    border: 8px solid var(--border-color);
     border-radius: 40px;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30);
-    background-color: #CCEFFF;
+    background-color: var(--sky-color);
     width: 300px;
     height: 600px;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+input:checked {
+    counter-increment: points;
+}
+.score::after {
+content: counter(points);
 }
 .layers {
     position: absolute;
@@ -22,16 +44,42 @@ body {
 .layer-1 {
     z-index: 1;
     width: 80px;
-    height: 450px;
-    bottom: 0;
+    height: 100px;
+    bottom: 356px;
     right: 60px;
+
+    animation: move 2.3s ease-in-out infinite;
 }
+
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.layers input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
 .layer-2 {
     z-index: 2;
     width: 80px;
-    height: 450px;
-    bottom: 0;
-    left: 60px
+    height: 100px;
+    bottom: 356px;
+    left: 60px;
+
+    animation: move 1s ease-in infinite;
 }
 .layer-3 {
     z-index: 3;
@@ -41,34 +89,58 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: lightcoral;
+    border-radius: 20px;
+    background-color: var(--mountain-color);
+}
+.mountain {
+    border: 3px solid var(--border-color);
+}
+.gras {
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 3px solid var(--border-color);
+    background-color: #f7f0bf;
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, #46a81c 25%, transparent 25%), linear-gradient(225deg, #46a81c 25%, transparent 25%), linear-gradient(45deg, #46a81c 25%, transparent 25%), linear-gradient(315deg, #46a81c 25%, #f7f0bf 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
 }
 .layer-4 {
     z-index: 4;
     width: 80px;
-    height: 350px;
-    bottom: 0;
+    height: 100px;
+    bottom: 256px;
     left: 30px;
+
+    animation: move 1.8s ease infinite;
 }
 .layer-5 {
     z-index: 5;
     width: 190px;
     height: 310px;
-    background-color: saddlebrown;
+    background-color: var(--mountain-color);
+    border-radius: 20px;
     bottom: 0;
 }
 .layer-6 {
     z-index: 6;
     width: 80px;
-    height: 280px;
-    bottom: 0;
+    height: 100px;
+    bottom: 186px;
     right: 30px;
+
+
+    animation: move 3s ease-in-out infinite;
 }
 .layer-7 {
     z-index: 7;
     width: 200px;
     height: 240px;
-    background-color: rgb(19, 139, 49);
+    background-color: var(--mountain-color);
+    border-radius: 20px;
     bottom: 0;
     right: 0;
 }
@@ -76,22 +148,31 @@ body {
     z-index: 8;
     width: 130px;
     height: 150px;
-    background-color: #fff;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 16%;
+    background-color: var(--rabbit-color);
     bottom: 0;
+    left: 3px;
 }
 .layer-9 {
     z-index: 9;
     width: 130px;
     height: 150px;
-    background-color: #fff;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 17%;
+    background-color: var(--rabbit-color);
     bottom: 0;
-    right: 0;
+    right: 3px;
 }
 .layer-10 {
     z-index: 10;
     width: 130px;
     height: 100px;
-    background-color: orchid;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: var(--forest-green);
     bottom: 0;
     left: 0;
     right: 0;
